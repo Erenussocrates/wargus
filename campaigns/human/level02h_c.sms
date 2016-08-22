@@ -32,6 +32,13 @@ AddTrigger(
   return true end)
 
 AddTrigger(
+function() return GetPlayerData(6, "UnitTypesCount", "unit-ranger") == 0 and
+             GetPlayerData(6, "UnitTypesCount", "unit-archer") == 0) and
+             GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-ranger") == 0 and
+             GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-archer") == 0) end,
+             function() return ActionDefeat() end)
+
+AddTrigger(
   function() return GetPlayerData(GetThisPlayer(), "TotalNumUnits") == 0 end,
   function() return ActionDefeat() end)
 ]]
