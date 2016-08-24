@@ -16,6 +16,11 @@ AddTrigger(
   function() return ActionVictory() end)
 
 AddTrigger(
+  function() return GetPlayerData(4, "UnitTypesCount", "unit-attack-peasant") <= 3 and
+  GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-attack-peasant") <= 3 end,
+  function() return ActionDefeat() end)
+
+AddTrigger(
   function() return GetPlayerData(GetThisPlayer(), "TotalNumUnits") == 0 end,
   function() return ActionDefeat() end)
 ]]
@@ -72,6 +77,8 @@ DefineAllowHumanAlways()
 DefineAllowOrcAlways()
 DefineAllowTable(allowedHumanUnits, "AAAAAAAAAAAAAAAA")
 DefineAllowTable(allowedOrcUnits, "AAAAAAAAAAAAAAAA")
+
+DefineAllow("upgrade-holy-vision", "RRRRRRRRRRRRRRRR")
 
 -- AI
 
