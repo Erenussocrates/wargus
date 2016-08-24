@@ -244,4 +244,8 @@ DefineAllowSpecialUnits("FFFFFFFFFFFFFFFF")
 DefineAllowHumanAlways()
 DefineAllowOrcAlways()
 
+DefineAllow("upgrade-holy-vision", "RRRRRRRRRRRRRRRR")
+DefineAllow("upgrade-healing", "RRRRRRRRRRRRRRRR")
+DefineAllow("upgrade-exorcism", "RRRRRRRRRRRRRRRR")
+
 Load("campaigns/human-exp/levelx06h.sms")
