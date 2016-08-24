@@ -20,6 +20,11 @@ AddTrigger(
   function() return ActionVictory() end)
 
 AddTrigger(
+  function() return GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-mage") == 0 and
+    GetPlayerData(4, "UnitTypesCount", "unit-mage") == 0 end,
+  function() return ActionDefeat() end)
+
+AddTrigger(
   function() return GetPlayerData(GetThisPlayer(), "TotalNumUnits") == 0 end,
   function() return ActionDefeat() end)
 ]]
