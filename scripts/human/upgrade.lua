@@ -82,6 +82,8 @@ local upgrades = {
     {   200,  2000,     0,     0,     0,     0,     0}},
   {"upgrade-blizzard", "icon-blizzard",
     {   200,  2000,     0,     0,     0,     0,     0}},
+  {"upgrade-fighter", "icon-gnomish-flying-machine",
+    {   250,  1500,     0,     0,     0,     0,     0}},
 }
 
 for i = 1,table.getn(upgrades) do
@@ -137,25 +139,25 @@ DefineModifier("upgrade-human-ship-cannon1",
   {"Level", 1},
   {"PiercingDamage", 5},
   {"apply-to", "unit-human-destroyer"}, {"apply-to", "unit-battleship"},
-  {"apply-to", "unit-human-submarine"})
+  {"apply-to", "unit-human-submarine"}, {"apply-to", "unit-flagship"})
 
 DefineModifier("upgrade-human-ship-cannon2",
   {"Level", 1},
   {"PiercingDamage", 5},
   {"apply-to", "unit-human-destroyer"}, {"apply-to", "unit-battleship"},
-  {"apply-to", "unit-human-submarine"})
+  {"apply-to", "unit-human-submarine"}, {"apply-to", "unit-flagship"})
 
 DefineModifier("upgrade-human-ship-armor1",
   {"Level", 1},
   {"Armor", 5},
   {"apply-to", "unit-human-destroyer"}, {"apply-to", "unit-battleship"},
-  {"apply-to", "unit-human-transport"})
+  {"apply-to", "unit-human-transport"}, {"apply-to", "unit-flagship"})
 
 DefineModifier("upgrade-human-ship-armor2",
   {"Level", 1},
   {"Armor", 5},
   {"apply-to", "unit-human-destroyer"}, {"apply-to", "unit-battleship"},
-  {"apply-to", "unit-human-transport"})
+  {"apply-to", "unit-human-transport"}, {"apply-to", "unit-flagship"})
 
 DefineModifier("upgrade-ballista1",
   {"Level", 1},
@@ -169,6 +171,9 @@ DefineModifier("upgrade-ballista2",
 
 DefineModifier("upgrade-ranger",
   {"apply-to", "unit-archer"}, {"convert-to", "unit-ranger"})
+  
+DefineModifier("upgrade-fighter",
+  {"apply-to", "unit-balloon"}, {"convert-to", "unit-fighter"})
 
 DefineModifier("upgrade-longbow",
   {"Level", 1},
@@ -184,7 +189,7 @@ DefineModifier("upgrade-ranger-scouting",
 DefineModifier("upgrade-ranger-marksmanship",
   {"Level", 1},
   {"PiercingDamage", 3},
-  {"apply-to", "unit-archer"}, {"apply-to", "unit-ranger"})
+  {"apply-to", "unit-archer"}, {"apply-to", "unit-ranger"}, {"apply-to", "unit-female-hero"})
 
 DefineModifier("upgrade-paladin",
   {"apply-to", "unit-knight"}, {"convert-to", "unit-paladin"})
@@ -290,6 +295,8 @@ DefineDependency("unit-ranger",
   {"upgrade-ranger", "unit-elven-lumber-mill"})
 DefineDependency("unit-paladin",
   {"upgrade-paladin", "unit-stables", "unit-human-blacksmith"})
+--DefineDependency("unit-nuke",
+--  {"unit-castle", "unit-human-foundry", "unit-elven-lumber-mill", "unit-human-blacksmith"})
 
 --- human naval forces
 DefineDependency("unit-human-submarine",
@@ -353,6 +360,9 @@ DefineDependency("upgrade-ranger-scouting",
   {"unit-keep", "upgrade-ranger"}, "or", {"unit-castle", "upgrade-ranger"})
 DefineDependency("upgrade-ranger-marksmanship",
   {"unit-keep", "upgrade-ranger"}, "or", {"unit-castle", "upgrade-ranger"})
+  
+DefineDependency("upgrade-fighter",
+  {"unit-castle", "unit-human-foundry", "unit-elven-lumber-mill", "unit-human-blacksmith"})
 
 --- human spells
 -- DefineDependency("upgrade-holy-vision",
