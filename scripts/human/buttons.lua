@@ -43,19 +43,19 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-move-peasant",
     "unit-dwarves", "unit-ranger", "unit-ballista", "unit-peasant",
     "unit-female-hero",
     "unit-flying-angel", "unit-arthor-literios", "unit-knight-rider", "unit-wise-man",
-    "unit-man-of-light", "unit-white-mage", "unit-balloon",
-    "unit-gryphon-rider", "unit-mage", "unit-critter",
+    "unit-man-of-light", "unit-white-mage", "unit-balloon", "unit-fighter",
+    "unit-gryphon-rider", "unit-gryphon-rider-test", "unit-mage", "unit-critter", "unit-nuke",
     "human-group"} } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-human-shield1",
   Action = "stop",
   Key = "s", Hint = _("~!STOP"), Popup = "popup-human-commands",
   ForUnit = {"unit-footman", "unit-knight", "unit-archer", "unit-paladin", "unit-attack-peasant",
-    "unit-dwarves", "unit-ranger", "unit-ballista", "unit-peasant",
+    "unit-dwarves", "unit-nuke", "unit-ranger", "unit-ballista", "unit-peasant",
     "unit-female-hero",
     "unit-flying-angel", "unit-arthor-literios", "unit-knight-rider", "unit-wise-man",
-    "unit-man-of-light", "unit-white-mage", "unit-balloon",
-    "unit-gryphon-rider", "unit-mage", "unit-critter",
+    "unit-man-of-light", "unit-white-mage", "unit-balloon", "unit-fighter",
+    "unit-gryphon-rider", "unit-gryphon-rider-test", "unit-mage", "unit-critter",
     "human-group"} } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-human-shield2",
@@ -63,7 +63,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-human-shield2",
   Allowed = "check-upgrade", AllowArg = {"upgrade-human-shield1"},
   Key = "s", Hint = _("~!STOP"), Popup = "popup-human-commands",
   ForUnit = {"unit-footman", "unit-knight", "unit-archer", "unit-paladin", "unit-attack-peasant",
-    "unit-dwarves", "unit-ranger", "unit-ballista", "unit-arthor-literios", "unit-knight-rider",
+    "unit-dwarves", "unit-nuke", "unit-ranger", "unit-ballista", "unit-arthor-literios", "unit-knight-rider",
     "unit-wise-man", "unit-man-of-light"} } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-human-shield3",
@@ -71,24 +71,24 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-human-shield3",
   Allowed = "check-upgrade", AllowArg = {"upgrade-human-shield2"},
   Key = "s", Hint = _("~!STOP"), Popup = "popup-human-commands",
   ForUnit = {"unit-footman", "unit-knight", "unit-archer", "unit-paladin", "unit-attack-peasant",
-    "unit-dwarves", "unit-ranger", "unit-ballista", "unit-arthor-literios", "unit-knight-rider",
+    "unit-dwarves", "unit-nuke", "unit-ranger", "unit-ballista", "unit-arthor-literios", "unit-knight-rider",
     "unit-wise-man", "unit-man-of-light"} } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-sword1",
   Action = "attack",
   Key = "a", Hint = _("~!ATTACK"), Popup = "popup-human-commands",
   ForUnit = {"unit-footman", "unit-knight", "unit-archer", "unit-paladin", "unit-attack-peasant",
-    "unit-dwarves", "unit-ranger", "unit-ballista", "unit-peasant",
+    "unit-dwarves", "unit-nuke", "unit-ranger", "unit-ballista", "unit-peasant",
     "unit-female-hero",
     "unit-flying-angel", "unit-arthor-literios", "unit-knight-rider", "unit-wise-man",
-    "unit-man-of-light", "unit-white-mage", "unit-gryphon-rider", "human-group"} } )
+    "unit-man-of-light", "unit-white-mage", "unit-gryphon-rider", "unit-gryphon-rider-test", "unit-fighter", "human-group"} } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-sword2",
   Action = "attack",
   Allowed = "check-upgrade", AllowArg = {"upgrade-sword1"},
   Key = "a", Hint = _("~!ATTACK"), Popup = "popup-human-commands",
   ForUnit = {"unit-footman", "unit-knight", "unit-archer", "unit-paladin", "unit-attack-peasant",
-    "unit-dwarves", "unit-ranger", "unit-ballista", "unit-arthor-literios", "unit-knight-rider",
+    "unit-dwarves", "unit-nuke", "unit-ranger", "unit-ballista", "unit-arthor-literios", "unit-knight-rider",
     "unit-wise-man", "unit-man-of-light"} } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-sword3",
@@ -96,7 +96,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-sword3",
   Allowed = "check-upgrade", AllowArg = {"upgrade-sword2"},
   Key = "a", Hint = _("~!ATTACK"), Popup = "popup-human-commands",
   ForUnit = {"unit-footman", "unit-knight", "unit-archer", "unit-paladin", "unit-attack-peasant",
-    "unit-dwarves", "unit-ranger", "unit-ballista", "unit-arthor-literios", "unit-knight-rider",
+    "unit-dwarves", "unit-nuke", "unit-ranger", "unit-ballista", "unit-arthor-literios", "unit-knight-rider",
     "unit-wise-man", "unit-man-of-light"} } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-arrow1",
@@ -123,37 +123,43 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-human-patrol-land",
   ForUnit = {"unit-footman", "unit-knight", "unit-archer", "unit-paladin", "unit-attack-peasant",
     "unit-dwarves", "unit-ranger", "unit-ballista", "unit-female-hero",
     "unit-flying-angel", "unit-arthor-literios", "unit-knight-rider", "unit-wise-man",
-    "unit-man-of-light", "unit-gryphon-rider", "human-group",
-    "unit-balloon"} } )
+    "unit-man-of-light", "unit-gryphon-rider", "unit-gryphon-rider-test", "human-group",
+    "unit-balloon", "unit-fighter"} } )
 else
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-human-patrol-land",
   Action = "patrol",
   Key = "p", Hint = _("~!PATROL"), Popup = "popup-human-commands",
   ForUnit = {"unit-footman", "unit-knight", "unit-archer", "unit-paladin", "unit-attack-peasant",
-    "unit-dwarves", "unit-ranger", "unit-ballista", "unit-female-hero",
+    "unit-dwarves", "unit-nuke", "unit-ranger", "unit-ballista", "unit-female-hero",
     "unit-flying-angel", "unit-arthor-literios", "unit-knight-rider", "unit-wise-man",
-    "unit-man-of-light", "unit-gryphon-rider", "human-group"} } )
+    "unit-man-of-light", "unit-gryphon-rider", "unit-gryphon-rider-test", "human-group"} } )
 end
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-human-stand-ground",
   Action = "stand-ground",
   Key = "t", Hint = _("S~!TAND GROUND"), Popup = "popup-human-commands",
   ForUnit = {"unit-footman", "unit-knight", "unit-archer", "unit-paladin", "unit-attack-peasant",
-    "unit-dwarves", "unit-ranger", "unit-ballista", "unit-female-hero",
+    "unit-dwarves", "unit-nuke", "unit-ranger", "unit-ballista", "unit-female-hero",
     "unit-flying-angel", "unit-arthor-literios", "unit-knight-rider", "unit-wise-man",
-    "unit-man-of-light", "unit-gryphon-rider", "human-group",
-    "unit-human-submarine", "unit-battleship", "unit-human-destroyer"} } )
+    "unit-man-of-light", "unit-gryphon-rider", "unit-gryphon-rider-test", "human-group",
+    "unit-human-submarine", "unit-battleship", "unit-human-destroyer", "unit-balloon", "unit-flagship", "unit-fighter"} } )
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-human-attack-ground",
   Action = "attack-ground",
   Key = "g", Hint = _("ATTACK ~!GROUND"), Popup = "popup-human-commands",
-  ForUnit = {"unit-ballista", "unit-battleship", "human-group"} } )
+  ForUnit = {"unit-ballista", "unit-battleship", "human-group", "unit-flagship"} } )
 
 DefineButton( { Pos = 9, Level = 0, Icon = "icon-human-demolish",
   Action = "cast-spell", Value = "spell-suicide-bomber",
   Allowed = "check-true", Popup = "popup-human-commands",
   Key = "d", Hint = _("~!DEMOLISH"),
   ForUnit = {"unit-dwarves"} } )
+  
+ DefineButton( { Pos = 9, Level = 0, Icon = "icon-exorcism",
+  Action = "cast-spell", Value = "spell-nuke",
+  Allowed = "check-true", Popup = "popup-human-commands",
+  Key = "o", Hint = _("~!OBLITERATE"),
+  ForUnit = {"unit-nuke"} } )
 
 -- paladin specific actions ---------------------------------------------------
 
@@ -195,7 +201,25 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-slow",
   Action = "cast-spell", Value = "spell-slow", Popup = "popup-human-upgrade",
   Allowed = "check-upgrade", AllowArg = {"upgrade-slow"},
   Key = "o", Hint = _("SL~!OW"),
-  ForUnit = {"unit-mage", "unit-white-mage"} } )
+  ForUnit = {"unit-mage"} } )
+  
+  DefineButton( { Pos = 5, Level = 0, Icon = "icon-slow",
+  Action = "cast-spell", Value = "spell-slow-khadgar", Popup = "popup-human-upgrade",
+  Allowed = "check-true",
+  Key = "o", Hint = _("SL~!OW"),
+  ForUnit = {"unit-white-mage"} } )
+  
+  DefineButton( { Pos = 6, Level = 0, Icon = "icon-fireball",
+  Action = "cast-spell", Value = "spell-explosion", Popup = "popup-human-upgrade",
+  Allowed = "check-true",
+  Key = "e", Hint = _("E~!XPLOSION"),
+  ForUnit = {"unit-kael"} } )
+  
+  --DefineButton( { Pos = 7, Level = 0, Icon = "icon-exorcism",
+  --Action = "cast-spell", Value = "spell-carpet-bomb", Popup = "popup-human-upgrade",
+  --Allowed = "check-true",
+  --Key = "b", Hint = _("CARPET B~!OMB"),
+  --ForUnit = {"unit-fighter", "unit-gryphon-rider-test"} } )
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-flame-shield",
   Action = "cast-spell", Value = "spell-flame-shield", Popup = "popup-human-upgrade",
@@ -436,11 +460,21 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-gnomish-flying-machine",
   Action = "train-unit", Value = "unit-balloon", Popup = "popup-human-unit",
   Key = "f", Hint = _("BUILD GNOMISH ~!FLYING MACHINE"),
   ForUnit = {"unit-inventor"} } )
+  
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-gnomish-flying-machine",
+  Action = "train-unit", Value = "unit-fighter", Popup = "popup-human-unit",
+  Key = "f", Hint = _("BUILD GNOMISH ~!FIGHTER"),
+  ForUnit = {"unit-inventor"} } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarves",
   Action = "train-unit", Value = "unit-dwarves", Popup = "popup-human-unit",
   Key = "d", Hint = _("TRAIN ~!DWARVEN DEMOLITION SQUAD"),
   ForUnit = {"unit-inventor"} } )
+  
+--DefineButton( { Pos = 3, Level = 0, Icon = "icon-ballista2",
+--  Action = "train-unit", Value = "unit-nuke", Popup = "popup-human-unit",
+--  Key = "n", Hint = _("TRAIN TACTICAL ~!NUKE SQUAD"),
+--  ForUnit = {"unit-inventor"} } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-mage",
   Action = "train-unit", Value = "unit-mage", Popup = "popup-human-unit",
@@ -503,14 +537,14 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-human-ship-move",
   Key = "m", Hint = _("~!MOVE"), Popup = "popup-human-commands",
   ForUnit = {"unit-human-oil-tanker",
     "unit-human-submarine", "unit-battleship", "unit-human-destroyer",
-    "unit-human-transport"} } )
+    "unit-human-transport", "unit-flagship"} } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-human-ship-armor1",
   Action = "stop",
   Key = "s", Hint = _("~!STOP"), Popup = "popup-human-commands",
   ForUnit = {"unit-human-oil-tanker",
     "unit-human-submarine", "unit-battleship", "unit-human-destroyer",
-    "unit-human-transport"} } )
+    "unit-human-transport", "unit-flagship"} } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-human-unload",
   Action = "unload",
@@ -535,24 +569,24 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-human-ship-return-oil",
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-human-ship-cannon1",
   Action = "attack",
   Key = "a", Hint = _("~!ATTACK"), Popup = "popup-human-commands",
-  ForUnit = {"unit-human-submarine", "unit-battleship", "unit-human-destroyer"} } )
+  ForUnit = {"unit-human-submarine", "unit-battleship", "unit-human-destroyer", "unit-flagship"} } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-human-ship-cannon2",
   Action = "attack",
   Allowed = "check-upgrade", AllowArg = {"upgrade-human-ship-cannon1"},
   Key = "a", Hint = _("~!ATTACK"), Popup = "popup-human-commands",
-  ForUnit = {"unit-human-submarine", "unit-battleship", "unit-human-destroyer"} } )
+  ForUnit = {"unit-human-submarine", "unit-battleship", "unit-human-destroyer", "unit-flagship"} } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-human-ship-cannon3",
   Action = "attack",
   Allowed = "check-upgrade", AllowArg = {"upgrade-human-ship-cannon2"},
   Key = "a", Hint = _("~!ATTACK"), Popup = "popup-human-commands",
-  ForUnit = {"unit-human-submarine", "unit-battleship", "unit-human-destroyer"} } )
+  ForUnit = {"unit-human-submarine", "unit-battleship", "unit-human-destroyer", "unit-flagship"} } )
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-human-patrol-naval",
   Action = "patrol",
   Key = "p", Hint = _("~!PATROL"), Popup = "popup-human-commands",
-  ForUnit = {"unit-human-submarine", "unit-battleship", "unit-human-destroyer"} } )
+  ForUnit = {"unit-human-submarine", "unit-battleship", "unit-human-destroyer", "unit-flagship"} } )
 
 if (wargus.extensions) then
 do
@@ -650,7 +684,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-ranger-marksmanship",
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-paladin",
   Action = "research", Value = "upgrade-paladin", Popup = "popup-human-upgrade",
   Allowed = "check-single-research",
-  Key = "p", Hint = _("UPGRADES KNIGHTS TO ~!PALADINS"),
+  Key = "p", Hint = _("UPGRADE KNIGHTS TO ~!PALADINS"),
   ForUnit = {"unit-church"} } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-heal",
@@ -718,3 +752,9 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-human-ship-armor3",
   Allowed = "check-single-research",
   Key = "a", Hint = _("UPGRADE SHIP ~!ARMOR (Armor +5)"),
   ForUnit = {"unit-human-foundry"} } )
+  
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-balloon",
+  Action = "research", Value = "upgrade-fighter", Popup = "popup-human-upgrade",
+  Allowed = "check-single-research",
+  Key = "u", Hint = _("~!UPGRADE FLYING MACHINES TO FIGHTERS"),
+  ForUnit = {"unit-inventor"} } )
