@@ -51,8 +51,6 @@ DefineAllow("upgrade-paladin", "AAAAAAAAAAAAAAAA")
 DefineAllow("upgrade-holy-vision", "RRRRRRRRRRRRRRRR")
 DefineAllow("upgrade-healing", "RRRRRRRRRRRRRRRR")
 DefineAllow("upgrade-exorcism", "RRRRRRRRRRRRRRRR")
-DefineAllow("upgrade-human-ship-cannon1", "AAAAAAAAAAAAAAAA")
-DefineAllow("upgrade-human-ship-cannon2", "AAAAAAAAAAAAAAAA")
 DefineAllow("upgrade-human-ship-armor1", "AAAAAAAAAAAAAAAA")
 DefineAllow("upgrade-human-ship-armor2", "AAAAAAAAAAAAAAAA")
 
