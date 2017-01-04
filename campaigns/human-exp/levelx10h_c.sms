@@ -19,6 +19,9 @@ AddTrigger(
     GetPlayerData(6, "TotalNumUnits") == 0 end,
   function() return ActionVictory() end)
 AddTrigger(
+  function() return GetPlayerData(15, "UnitTypesCount", "unit-gold-mine") == 0 end,
+  function() return ActionVictory() end)
+AddTrigger(
   function() return GetPlayerData(GetThisPlayer(), "TotalNumUnits") == 0 end,
   function() return ActionDefeat() end)
 AddTrigger(
