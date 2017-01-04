@@ -232,4 +232,9 @@ DefineAi("orc-14-green", "*", "orc-14-green", AiOrc14Green)
 DefineAi("orc-14-white", "*", "orc-14-white", AiOrc14White)
 -- Map
 
+DefineAllow("upgrade-holy-vision", "RRRRRRRRRRRRRRRR")
+DefineAllow("upgrade-fireball", "RRRRRRRRRRRRRRRR")
+DefineAllow("upgrade-eye-of-kilrogg", "RRRRRRRRRRRRRRRR")
+DefineAllow("upgrade-death-coil", "RRRRRRRRRRRRRRRR")
+
 Load("campaigns/orc/level14o.sms")
